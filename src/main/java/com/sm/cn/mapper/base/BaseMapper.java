@@ -1,4 +1,4 @@
-package com.sm.cn.mapper;
+package com.sm.cn.mapper.base;
 
 import com.sm.cn.entity.Brand;
 import com.sm.cn.entity.BrandExample;

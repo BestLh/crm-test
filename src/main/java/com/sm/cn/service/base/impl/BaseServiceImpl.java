@@ -1,7 +1,7 @@
 package com.sm.cn.service.base.impl;
 
 import com.github.pagehelper.PageInfo;
-import com.sm.cn.mapper.BaseMapper;
+import com.sm.cn.mapper.base.BaseMapper;
 import com.sm.cn.service.base.BaseService;
 import com.sm.cn.vo.PageVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,11 @@ import java.util.List;
 public class BaseServiceImpl<T,ID> implements BaseService<T,ID> {
     @Autowired
     private BaseMapper<T,ID> baseMapper;
+
+    @Override
+    public BaseMapper<T,ID> getBaseMapper(){
+        return baseMapper;
+    }
 
     @Override
     public PageVo<T> findPage() {

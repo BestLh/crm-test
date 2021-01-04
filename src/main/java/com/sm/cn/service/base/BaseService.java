@@ -1,5 +1,6 @@
 package com.sm.cn.service.base;
 
+import com.sm.cn.mapper.base.BaseMapper;
 import com.sm.cn.vo.PageVo;
 
 import java.util.List;
@@ -55,4 +56,6 @@ public interface BaseService<T, ID> {
      * 封装分页数据
      */
     PageVo<T> setPageVo(List<T> list);
+
+    public BaseMapper<T,ID> getBaseMapper();
 }

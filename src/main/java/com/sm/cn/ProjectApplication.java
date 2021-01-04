@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @EnableTransactionManagement
-@MapperScan(basePackages = "com.sm.cn.mapper")
+@MapperScan(basePackages = {"com.sm.cn.mapper"})
 public class ProjectApplication {
     public static void main(String[] args) {
         SpringApplication.run(ProjectApplication.class);
