@@ -1,10 +1,10 @@
 package com.sm.cn.entity;
 
+import com.sm.cn.entity.base.BaseEntity;
+
 import java.util.Date;
 
-public class Supplier {
-    private Long id;
-
+public class Supplier extends BaseEntity {
     private String supplierName;
 
     private String supplierContact;
@@ -18,22 +18,6 @@ public class Supplier {
     private String supplierBrank;
 
     private String supplierBrankCode;
-
-    private Date addTime;
-
-    private Long creatorId;
-
-    private Date updateTime;
-
-    private Long updateId;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getSupplierName() {
         return supplierName;
@@ -89,37 +73,5 @@ public class Supplier {
 
     public void setSupplierBrankCode(String supplierBrankCode) {
         this.supplierBrankCode = supplierBrankCode == null ? null : supplierBrankCode.trim();
-    }
-
-    public Date getAddTime() {
-        return addTime;
-    }
-
-    public void setAddTime(Date addTime) {
-        this.addTime = addTime;
-    }
-
-    public Long getCreatorId() {
-        return creatorId;
-    }
-
-    public void setCreatorId(Long creatorId) {
-        this.creatorId = creatorId;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public Long getUpdateId() {
-        return updateId;
-    }
-
-    public void setUpdateId(Long updateId) {
-        this.updateId = updateId;
     }
 }
