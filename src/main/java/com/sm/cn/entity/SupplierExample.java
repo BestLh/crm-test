@@ -515,143 +515,143 @@ public class SupplierExample {
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankIsNull() {
-            addCriterion("supplier_brank is null");
+        public Criteria andSupplierBankIsNull() {
+            addCriterion("supplier_bank is null");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankIsNotNull() {
-            addCriterion("supplier_brank is not null");
+        public Criteria andSupplierBankIsNotNull() {
+            addCriterion("supplier_bank is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankEqualTo(String value) {
-            addCriterion("supplier_brank =", value, "supplierBrank");
+        public Criteria andSupplierBankEqualTo(String value) {
+            addCriterion("supplier_bank =", value, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankNotEqualTo(String value) {
-            addCriterion("supplier_brank <>", value, "supplierBrank");
+        public Criteria andSupplierBankNotEqualTo(String value) {
+            addCriterion("supplier_bank <>", value, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankGreaterThan(String value) {
-            addCriterion("supplier_brank >", value, "supplierBrank");
+        public Criteria andSupplierBankGreaterThan(String value) {
+            addCriterion("supplier_bank >", value, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankGreaterThanOrEqualTo(String value) {
-            addCriterion("supplier_brank >=", value, "supplierBrank");
+        public Criteria andSupplierBankGreaterThanOrEqualTo(String value) {
+            addCriterion("supplier_bank >=", value, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankLessThan(String value) {
-            addCriterion("supplier_brank <", value, "supplierBrank");
+        public Criteria andSupplierBankLessThan(String value) {
+            addCriterion("supplier_bank <", value, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankLessThanOrEqualTo(String value) {
-            addCriterion("supplier_brank <=", value, "supplierBrank");
+        public Criteria andSupplierBankLessThanOrEqualTo(String value) {
+            addCriterion("supplier_bank <=", value, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankLike(String value) {
-            addCriterion("supplier_brank like", value, "supplierBrank");
+        public Criteria andSupplierBankLike(String value) {
+            addCriterion("supplier_bank like", value, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankNotLike(String value) {
-            addCriterion("supplier_brank not like", value, "supplierBrank");
+        public Criteria andSupplierBankNotLike(String value) {
+            addCriterion("supplier_bank not like", value, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankIn(List<String> values) {
-            addCriterion("supplier_brank in", values, "supplierBrank");
+        public Criteria andSupplierBankIn(List<String> values) {
+            addCriterion("supplier_bank in", values, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankNotIn(List<String> values) {
-            addCriterion("supplier_brank not in", values, "supplierBrank");
+        public Criteria andSupplierBankNotIn(List<String> values) {
+            addCriterion("supplier_bank not in", values, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankBetween(String value1, String value2) {
-            addCriterion("supplier_brank between", value1, value2, "supplierBrank");
+        public Criteria andSupplierBankBetween(String value1, String value2) {
+            addCriterion("supplier_bank between", value1, value2, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankNotBetween(String value1, String value2) {
-            addCriterion("supplier_brank not between", value1, value2, "supplierBrank");
+        public Criteria andSupplierBankNotBetween(String value1, String value2) {
+            addCriterion("supplier_bank not between", value1, value2, "supplierBank");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeIsNull() {
-            addCriterion("supplier_brank_code is null");
+        public Criteria andSupplierBankCodeIsNull() {
+            addCriterion("supplier_bank_code is null");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeIsNotNull() {
-            addCriterion("supplier_brank_code is not null");
+        public Criteria andSupplierBankCodeIsNotNull() {
+            addCriterion("supplier_bank_code is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeEqualTo(String value) {
-            addCriterion("supplier_brank_code =", value, "supplierBrankCode");
+        public Criteria andSupplierBankCodeEqualTo(String value) {
+            addCriterion("supplier_bank_code =", value, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeNotEqualTo(String value) {
-            addCriterion("supplier_brank_code <>", value, "supplierBrankCode");
+        public Criteria andSupplierBankCodeNotEqualTo(String value) {
+            addCriterion("supplier_bank_code <>", value, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeGreaterThan(String value) {
-            addCriterion("supplier_brank_code >", value, "supplierBrankCode");
+        public Criteria andSupplierBankCodeGreaterThan(String value) {
+            addCriterion("supplier_bank_code >", value, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeGreaterThanOrEqualTo(String value) {
-            addCriterion("supplier_brank_code >=", value, "supplierBrankCode");
+        public Criteria andSupplierBankCodeGreaterThanOrEqualTo(String value) {
+            addCriterion("supplier_bank_code >=", value, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeLessThan(String value) {
-            addCriterion("supplier_brank_code <", value, "supplierBrankCode");
+        public Criteria andSupplierBankCodeLessThan(String value) {
+            addCriterion("supplier_bank_code <", value, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeLessThanOrEqualTo(String value) {
-            addCriterion("supplier_brank_code <=", value, "supplierBrankCode");
+        public Criteria andSupplierBankCodeLessThanOrEqualTo(String value) {
+            addCriterion("supplier_bank_code <=", value, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeLike(String value) {
-            addCriterion("supplier_brank_code like", value, "supplierBrankCode");
+        public Criteria andSupplierBankCodeLike(String value) {
+            addCriterion("supplier_bank_code like", value, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeNotLike(String value) {
-            addCriterion("supplier_brank_code not like", value, "supplierBrankCode");
+        public Criteria andSupplierBankCodeNotLike(String value) {
+            addCriterion("supplier_bank_code not like", value, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeIn(List<String> values) {
-            addCriterion("supplier_brank_code in", values, "supplierBrankCode");
+        public Criteria andSupplierBankCodeIn(List<String> values) {
+            addCriterion("supplier_bank_code in", values, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeNotIn(List<String> values) {
-            addCriterion("supplier_brank_code not in", values, "supplierBrankCode");
+        public Criteria andSupplierBankCodeNotIn(List<String> values) {
+            addCriterion("supplier_bank_code not in", values, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeBetween(String value1, String value2) {
-            addCriterion("supplier_brank_code between", value1, value2, "supplierBrankCode");
+        public Criteria andSupplierBankCodeBetween(String value1, String value2) {
+            addCriterion("supplier_bank_code between", value1, value2, "supplierBankCode");
             return (Criteria) this;
         }
 
-        public Criteria andSupplierBrankCodeNotBetween(String value1, String value2) {
-            addCriterion("supplier_brank_code not between", value1, value2, "supplierBrankCode");
+        public Criteria andSupplierBankCodeNotBetween(String value1, String value2) {
+            addCriterion("supplier_bank_code not between", value1, value2, "supplierBankCode");
             return (Criteria) this;
         }
 

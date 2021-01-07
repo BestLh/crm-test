@@ -8,8 +8,8 @@
     <result column="supplier_phone" jdbcType="VARCHAR" property="supplierPhone" />
     <result column="supplier_email" jdbcType="VARCHAR" property="supplierEmail" />
     <result column="supplier_address" jdbcType="VARCHAR" property="supplierAddress" />
-    <result column="supplier_brank" jdbcType="VARCHAR" property="supplierBrank" />
-    <result column="supplier_brank_code" jdbcType="VARCHAR" property="supplierBrankCode" />
+    <result column="supplier_bank" jdbcType="VARCHAR" property="supplierBank" />
+    <result column="supplier_bank_code" jdbcType="VARCHAR" property="supplierBankCode" />
     <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
     <result column="creator_id" jdbcType="BIGINT" property="creatorId" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
@@ -75,7 +75,7 @@
   </sql>
   <sql id="Base_Column_List">
     id, supplier_name, supplier_contact, supplier_phone, supplier_email, supplier_address, 
-    supplier_brank, supplier_brank_code, add_time, creator_id, update_time, update_id
+    supplier_bank, supplier_bank_code, add_time, creator_id, update_time, update_id
   </sql>
   <select id="selectByExample" parameterType="com.sm.cn.entity.SupplierExample" resultMap="BaseResultMap">
     select
@@ -110,12 +110,12 @@
   <insert id="insert" parameterType="com.sm.cn.entity.Supplier">
     insert into t_supplier (id, supplier_name, supplier_contact, 
       supplier_phone, supplier_email, supplier_address, 
-      supplier_brank, supplier_brank_code, add_time, 
+      supplier_bank, supplier_bank_code, add_time, 
       creator_id, update_time, update_id
       )
     values (#{id,jdbcType=BIGINT}, #{supplierName,jdbcType=VARCHAR}, #{supplierContact,jdbcType=VARCHAR}, 
       #{supplierPhone,jdbcType=VARCHAR}, #{supplierEmail,jdbcType=VARCHAR}, #{supplierAddress,jdbcType=VARCHAR}, 
-      #{supplierBrank,jdbcType=VARCHAR}, #{supplierBrankCode,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}, 
+      #{supplierBank,jdbcType=VARCHAR}, #{supplierBankCode,jdbcType=VARCHAR}, #{addTime,jdbcType=TIMESTAMP}, 
       #{creatorId,jdbcType=BIGINT}, #{updateTime,jdbcType=TIMESTAMP}, #{updateId,jdbcType=BIGINT}
       )
   </insert>
@@ -140,11 +140,11 @@
       <if test="supplierAddress != null">
         supplier_address,
       </if>
-      <if test="supplierBrank != null">
-        supplier_brank,
+      <if test="supplierBank != null">
+        supplier_bank,
       </if>
-      <if test="supplierBrankCode != null">
-        supplier_brank_code,
+      <if test="supplierBankCode != null">
+        supplier_bank_code,
       </if>
       <if test="addTime != null">
         add_time,
@@ -178,11 +178,11 @@
       <if test="supplierAddress != null">
         #{supplierAddress,jdbcType=VARCHAR},
       </if>
-      <if test="supplierBrank != null">
-        #{supplierBrank,jdbcType=VARCHAR},
+      <if test="supplierBank != null">
+        #{supplierBank,jdbcType=VARCHAR},
       </if>
-      <if test="supplierBrankCode != null">
-        #{supplierBrankCode,jdbcType=VARCHAR},
+      <if test="supplierBankCode != null">
+        #{supplierBankCode,jdbcType=VARCHAR},
       </if>
       <if test="addTime != null">
         #{addTime,jdbcType=TIMESTAMP},
@@ -225,11 +225,11 @@
       <if test="record.supplierAddress != null">
         supplier_address = #{record.supplierAddress,jdbcType=VARCHAR},
       </if>
-      <if test="record.supplierBrank != null">
-        supplier_brank = #{record.supplierBrank,jdbcType=VARCHAR},
+      <if test="record.supplierBank != null">
+        supplier_bank = #{record.supplierBank,jdbcType=VARCHAR},
       </if>
-      <if test="record.supplierBrankCode != null">
-        supplier_brank_code = #{record.supplierBrankCode,jdbcType=VARCHAR},
+      <if test="record.supplierBankCode != null">
+        supplier_bank_code = #{record.supplierBankCode,jdbcType=VARCHAR},
       </if>
       <if test="record.addTime != null">
         add_time = #{record.addTime,jdbcType=TIMESTAMP},
@@ -256,8 +256,8 @@
       supplier_phone = #{record.supplierPhone,jdbcType=VARCHAR},
       supplier_email = #{record.supplierEmail,jdbcType=VARCHAR},
       supplier_address = #{record.supplierAddress,jdbcType=VARCHAR},
-      supplier_brank = #{record.supplierBrank,jdbcType=VARCHAR},
-      supplier_brank_code = #{record.supplierBrankCode,jdbcType=VARCHAR},
+      supplier_bank = #{record.supplierBank,jdbcType=VARCHAR},
+      supplier_bank_code = #{record.supplierBankCode,jdbcType=VARCHAR},
       add_time = #{record.addTime,jdbcType=TIMESTAMP},
       creator_id = #{record.creatorId,jdbcType=BIGINT},
       update_time = #{record.updateTime,jdbcType=TIMESTAMP},
@@ -284,11 +284,11 @@
       <if test="supplierAddress != null">
         supplier_address = #{supplierAddress,jdbcType=VARCHAR},
       </if>
-      <if test="supplierBrank != null">
-        supplier_brank = #{supplierBrank,jdbcType=VARCHAR},
+      <if test="supplierBank != null">
+        supplier_bank = #{supplierBank,jdbcType=VARCHAR},
       </if>
-      <if test="supplierBrankCode != null">
-        supplier_brank_code = #{supplierBrankCode,jdbcType=VARCHAR},
+      <if test="supplierBankCode != null">
+        supplier_bank_code = #{supplierBankCode,jdbcType=VARCHAR},
       </if>
       <if test="addTime != null">
         add_time = #{addTime,jdbcType=TIMESTAMP},
@@ -312,8 +312,8 @@
       supplier_phone = #{supplierPhone,jdbcType=VARCHAR},
       supplier_email = #{supplierEmail,jdbcType=VARCHAR},
       supplier_address = #{supplierAddress,jdbcType=VARCHAR},
-      supplier_brank = #{supplierBrank,jdbcType=VARCHAR},
-      supplier_brank_code = #{supplierBrankCode,jdbcType=VARCHAR},
+      supplier_bank = #{supplierBank,jdbcType=VARCHAR},
+      supplier_bank_code = #{supplierBankCode,jdbcType=VARCHAR},
       add_time = #{addTime,jdbcType=TIMESTAMP},
       creator_id = #{creatorId,jdbcType=BIGINT},
       update_time = #{updateTime,jdbcType=TIMESTAMP},

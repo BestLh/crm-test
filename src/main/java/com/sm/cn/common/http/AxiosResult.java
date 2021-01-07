@@ -2,7 +2,7 @@ package com.sm.cn.common.http;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-@JsonInclude
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AxiosResult<T> {
     private int status;
     private String message;
@@ -38,56 +38,56 @@ public class AxiosResult<T> {
      * 成功返回的方法
      */
     public static <T> AxiosResult<T> success(){
-        return setData(AxiosStatus.OK, null);
+        return setAxiosResult(AxiosStatus.OK, null);
     }
 
     /**
      * 成功返回的方法带数据
      */
     public static <T> AxiosResult<T> success(T data){
-        return setData(AxiosStatus.OK, data);
+        return setAxiosResult(AxiosStatus.OK, data);
     }
 
     /**
      * 成功返回自定义状态码的方法
      */
     public static <T> AxiosResult<T> success(AxiosStatus axiosStatus){
-        return setData(axiosStatus,null);
+        return setAxiosResult(axiosStatus,null);
     }
 
     /**
      * 成功返回自定义状态码的方法带数据
      */
     public static <T> AxiosResult<T> success(AxiosStatus axiosStatus,T data){
-        return setData(axiosStatus,data);
+        return setAxiosResult(axiosStatus,data);
     }
 
     /**
      * 错误返回的方法
      */
     public static <T> AxiosResult<T> error(){
-        return setData(AxiosStatus.ERROR, null);
+        return setAxiosResult(AxiosStatus.ERROR, null);
     }
 
     /**
      * 错误返回自定义状态码的方法
      */
     public static <T> AxiosResult<T> error(AxiosStatus axiosStatus){
-        return setData(axiosStatus,null);
+        return setAxiosResult(axiosStatus,null);
     }
 
     /**
      * 错误返回的方法带数据
      */
     public static <T> AxiosResult<T> error(T data){
-        return setData(AxiosStatus.ERROR, data);
+        return setAxiosResult(AxiosStatus.ERROR, data);
     }
 
     /**
      * 错误返回自定义状态码的方法带数据
      */
     public static <T> AxiosResult<T> error(AxiosStatus axiosStatus,T data){
-        return setData(axiosStatus,data);
+        return setAxiosResult(axiosStatus,data);
     }
 
     /**
@@ -97,11 +97,11 @@ public class AxiosResult<T> {
      * @param <T>
      * @return
      */
-    private static <T> AxiosResult<T> setData(AxiosStatus axiosStatus, T data) {
+    private static <T> AxiosResult<T> setAxiosResult(AxiosStatus axiosStatus, T data) {
         AxiosResult<T> axiosResult = new AxiosResult<>();
         axiosResult.setData(data);
-        axiosResult.setStatus(axiosResult.getStatus());
-        axiosResult.setMessage(axiosResult.getMessage());
+        axiosResult.setStatus(axiosStatus.getStatus());
+        axiosResult.setMessage(axiosStatus.getMessage());
         return axiosResult;
     }
 
