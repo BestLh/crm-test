@@ -53,4 +53,13 @@ public class BaseEntity {
     public void setUpdateId(Long updateId) {
         this.updateId = updateId;
     }
+
+    public void setEntityData(){
+        if (id == null) {
+            this.addTime = new Date();
+            this.creatorId = 1L;
+        }else {
+            this.updateId = 2L;
+        }
+    }
 }

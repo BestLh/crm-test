@@ -3,18 +3,20 @@ package com.sm.cn.service.base.impl;
 import com.github.pagehelper.PageInfo;
 import com.sm.cn.mapper.base.BaseMapper;
 import com.sm.cn.service.base.BaseService;
+import com.sm.cn.utils.ReflectionUtils;
 import com.sm.cn.vo.PageVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.reflect.Method;
 import java.util.List;
 
-public class BaseServiceImpl<T,ID> implements BaseService<T,ID> {
+public class BaseServiceImpl<T, ID> implements BaseService<T, ID> {
     @Autowired
-    private BaseMapper<T,ID> baseMapper;
+    private BaseMapper<T, ID> baseMapper;
 
     @Override
-    public BaseMapper<T,ID> getBaseMapper(){
+    public BaseMapper<T, ID> getBaseMapper() {
         return baseMapper;
     }
 
@@ -35,6 +37,7 @@ public class BaseServiceImpl<T,ID> implements BaseService<T,ID> {
 
     @Override
     public int addEntity(T entity) {
+        ReflectionUtils.invokeMethod(entity, "setEntityData", null, null);
         return baseMapper.insert(entity);
     }
 
@@ -65,13 +68,13 @@ public class BaseServiceImpl<T,ID> implements BaseService<T,ID> {
     @Transactional
     @Override
     public int batchDeleteByIds(List<ID> ids) {
-        ids.forEach(item ->baseMapper.deleteByPrimaryKey(item));
+        ids.forEach(item -> baseMapper.deleteByPrimaryKey(item));
         return 1;
     }
 
     @Override
     public PageVo<T> setPageVo(List<T> list) {
-        PageInfo<T> pageInfo =new PageInfo<>(list);
+        PageInfo<T> pageInfo = new PageInfo<>(list);
         long total = pageInfo.getTotal();
         PageVo<T> pageVo = new PageVo<>();
         pageVo.setList(list);
